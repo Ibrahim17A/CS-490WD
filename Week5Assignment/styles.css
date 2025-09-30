@@ -1,0 +1,100 @@
+/* Reset basic spacing so things are consistent */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Page basics */
+body {
+  font-family: Arial, Helvetica, sans-serif; /* clean and readable */
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+/* Center the page and add space */
+.wrapper {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* -------- Nav -------- */
+nav ul {
+  list-style: none;
+  padding: 10px;
+  background-color: #333;
+}
+nav ul li { display: inline; margin: 0 15px; }
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+nav a:hover { text-decoration: underline; }
+nav a:visited { color: lightgray; }
+
+/* -------- Hero -------- */
+.hero {
+  display: flex;                 /* image + text side by side */
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #e3e3e3;
+}
+.hero img {
+  width: 30%;
+  margin-right: 20px;
+  border-radius: 10px;           /* soft corners */
+}
+.hero-text {
+  max-width: 70%;
+  text-align: left;
+}
+
+/* -------- Features grid -------- */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* flexible cards */
+  gap: 20px;
+  padding: 20px;
+}
+.feature {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
+.feature img { width: 40%; }
+
+/* -------- Footer -------- */
+.footer {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+/* -------- Tablet (<= 768px) -------- */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;     /* stack image above text */
+    text-align: center;
+  }
+  .hero img {
+    width: 250px;
+    margin: 0 0 15px 0;
+  }
+  .hero-text {
+    max-width: 100%;
+    text-align: center;
+  }
+  nav ul { padding: 10px; }
+  nav ul li { display: block; margin: 10px 0; }
+}
+
+/* -------- Phone (<= 480px) -------- */
+@media (max-width: 480px) {
+  .wrapper { padding: 10px; }
+  .hero img { width: 200px; }
+  .features { grid-template-columns: 1fr; }  /* single column */
+  nav ul { padding: 5px; }
+  nav ul li { margin: 5px 0; }
+  nav a { font-size: 16px; }
+}
