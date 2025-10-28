@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ibrahim Alborno • Midterm Portfolio</title>
+
+  <!-- Google font for nicer text -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Link to my external CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Website Header -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Ibrahim Alborno</h1>
+      <p id="greeting" class="tagline">Welcome!</p>
+
+      <!-- Simple nav bar -->
+      <nav class="site-nav">
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Dark mode toggle button -->
+        <button id="themeToggle" class="btn ghost">🌙 Dark Mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container">
+    <!-- Projects section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <p class="muted">A few projects from my web development course.</p>
+
+      <div class="card-grid">
+        <!-- Project card 1 -->
+        <article class="card" data-title="Week 2 – Parks & Rec"
+          data-desc="Used semantic HTML and basic CSS layout."
+          data-link="../Week2Assignment/home.html">
+          <h3>Week 2 – Parks & Rec</h3>
+          <p>Semantic HTML + basic layout.</p>
+          <div class="actions">
+            <a class="btn" href="../Week2Assignment/home.html" target="_blank">Open</a>
+            <button class="btn ghost open-modal">More Info</button>
+          </div>
+        </article>
+
+        <!-- Project card 2 -->
+        <article class="card" data-title="Week 3 – Cozy Café"
+          data-desc="Menu layout and responsive navigation."
+          data-link="../Week3Assignment/home.html">
+          <h3>Week 3 – Cozy Café</h3>
+          <p>Responsive menu + nav bar.</p>
+          <div class="actions">
+            <a class="btn" href="../Week3Assignment/home.html" target="_blank">Open</a>
+            <button class="btn ghost open-modal">More Info</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li><a href="mailto:Ibrahimalborno17@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/ibrahim-alborno" target="_blank">LinkedIn</a></li>
+      </ul>
+
+      <!-- Contact form -->
+      <form id="contactForm" novalidate>
+        <label>Email
+          <input type="email" name="email" required placeholder="you@example.com">
+        </label>
+        <label>Message
+          <textarea name="message" rows="3" required placeholder="Say hi…"></textarea>
+        </label>
+        <button class="btn" type="submit">Send</button>
+        <p id="formMsg" class="form-msg"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer with auto year -->
+  <footer class="site-footer">
+    <small>&copy; <span id="year"></span> Ibrahim Alborno. All rights reserved.</small>
+  </footer>
+
+  <!-- Scroll-to-top button -->
+  <button id="toTop" class="to-top">↑</button>
+
+  <!-- Modal popup -->
+  <dialog id="projectModal">
+    <h3 id="modalTitle">Project</h3>
+    <p id="modalDesc">Description</p>
+    <div class="modal-actions">
+      <a id="modalLink" class="btn" href="#" target="_blank">Open Project</a>
+      <button id="closeModal" class="btn ghost">Close</button>
+    </div>
+  </dialog>
+
+  <!-- JS -->
+  <script src="script.js" defer></script>
+</body>
+</html>
