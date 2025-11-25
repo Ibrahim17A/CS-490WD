@@ -6,15 +6,23 @@
   <title>Ibrahim Alborno | Data Scientist Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <button id="darkModeToggle" aria-label="Toggle Dark Mode" class="floating-btn">🌓</button>
+  <button id="scrollToTop" aria-label="Scroll to Top" class="floating-btn">⬆</button>
+
   <header class="site-header">
+    <h1 id="greeting"></h1>
     <h1>Ibrahim Alborno</h1>
     <p class="tagline">Aspiring Data Scientist | AI & Data-Driven Solutions</p>
+
     <nav aria-label="Primary">
       <ul class="nav">
         <li><a href="#bio">Bio</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -23,7 +31,6 @@
   </header>
 
   <main>
-    <!-- BIO -->
     <section id="bio" class="card">
       <h2>Professional Bio</h2>
       <img src="profile.jpg" alt="Professional headshot of Ibrahim Alborno" class="avatar">
@@ -32,7 +39,6 @@
       </p>
     </section>
 
-    <!-- EDUCATION -->
     <section id="education" class="card">
       <h2>Education</h2>
       <p><strong>University of Missouri – Kansas City</strong><br>
@@ -43,7 +49,6 @@
         Data Science Foundations.</p>
     </section>
 
-    <!-- PROJECTS -->
     <section id="projects" class="card">
       <h2>Highlighted Project</h2>
       <article>
@@ -59,7 +64,41 @@
       </article>
     </section>
 
-    <!-- SKILLS -->
+    <section id="research" class="card">
+      <h2>Research</h2>
+      <article>
+        <h3>Data Science Intern — UMKC School of Engineering</h3>
+        <p><em>August 2025 – Present</em></p>
+        <ul class="bullets compact">
+          <li>Used high-performance computing (HPC) to analyze multi-omics and clinical datasets for cancer research.</li>
+          <li>Developed machine learning and AI models combining genomic, demographic, and clinical data to identify predictive cancer markers.</li>
+          <li>Built computational pipelines using statistical methods and advanced ML/AI to generate personalized cancer risk profiles.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="experience" class="card">
+      <h2>Experience</h2>
+
+      <article>
+        <h3>Sales Executive — EDU Connect / AI Property Flow</h3>
+        <p><em>July 2024 – January 2025</em></p>
+        <ul class="bullets compact">
+          <li>Promoted AI tools to improve communication between schools and students.</li>
+          <li>Delivered product demos and coordinated with education partners to increase adoption.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Tutor — Metropolitan Community College, Longview</h3>
+        <p><em>August 2022 – December 2023</em></p>
+        <ul class="bullets compact">
+          <li>Supported students in improving their academic performance.</li>
+          <li>Provided personalized tutoring in math and English.</li>
+        </ul>
+      </article>
+    </section>
+
     <section id="skills" class="card">
       <h2>Technical Skills</h2>
       <ul class="skills-list">
@@ -71,14 +110,12 @@
       </ul>
     </section>
 
-    <!-- RESUME -->
     <section id="resume" class="card">
       <h2>Resume</h2>
       <p>You can view or download my full resume below:</p>
       <a href="resume.pdf" target="_blank" class="btn">📄 View Full Resume (PDF)</a>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="card">
       <h2>Contact</h2>
       <p><strong>Email:</strong> <a href="mailto:Ibrahimalborno17@gmail.com">Ibrahimalborno17@gmail.com</a></p>
@@ -99,12 +136,15 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; <span id="year"></span> Ibrahim Alborno — All Rights Reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
